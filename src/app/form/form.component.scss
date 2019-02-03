@@ -1,0 +1,29 @@
+mat-radio-button {
+  display: block;
+  margin-bottom: 5px;
+}
+
+mat-form-field {
+  width: 100%
+}
+
+input {
+  border: 1px solid black
+}
+
+button {
+  width: 100%;
+  color: white;
+  background-color: #4E4742;
+}
+
+button:hover {
+  background-color: #f57d1b !important;
+}
+
+.alert {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  padding: .75rem 1.25rem;
+}

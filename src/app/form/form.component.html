@@ -1,0 +1,91 @@
+<!--<form #form="ngForm">-->
+  <!--<div>-->
+    <!--<input type="text" placeholder="שם פרטי" [(ngModel)]="model.firstName" name="first-name" required #firstName="ngModel"/>-->
+  <!--</div>-->
+  <!--<div [hidden]="firstName.valid || firstName.untouched" class="alert">-->
+    <!--הכנס שם פרטי-->
+  <!--</div>-->
+
+  <!--<mat-form-field>-->
+    <!--<input matInput type="text" placeholder="שם משפחה" [(ngModel)]="model.lastName" name="last-name" required #lastName="ngModel"/>-->
+  <!--</mat-form-field>-->
+  <!--<div [hidden]="lastName.valid || lastName.untouched" class="alert">-->
+    <!--הכנס שם משפחה-->
+  <!--</div>-->
+
+  <!--<mat-form-field>-->
+    <!--<input matInput type="text" placeholder="שם חברה" [(ngModel)]="model.companyName" name="company-name" required #companyName="ngModel"/>-->
+  <!--</mat-form-field>-->
+  <!--<div [hidden]="companyName.valid || companyName.untouched" class="alert">-->
+    <!--הכנס שם חברה-->
+  <!--</div>-->
+
+  <!--<mat-form-field>-->
+    <!--<input matInput type="text" placeholder="תפקיד" [(ngModel)]="model.role" name="role" required #role="ngModel"/>-->
+  <!--</mat-form-field>-->
+  <!--<div [hidden]="role.valid || role.untouched" class="alert">-->
+    <!--הכנס תפקיד-->
+  <!--</div>-->
+
+  <!--<mat-form-field>-->
+    <!--<input matInput type="text" placeholder="טלפון" [(ngModel)]="model.phone" name="phone" minlength="9" maxlength="10" required #phone="ngModel"/>-->
+  <!--</mat-form-field>-->
+  <!--<div [hidden]="phone.valid || phone.untouched" class="alert">-->
+    <!--הכנס מספר טלפון-->
+  <!--</div>-->
+
+  <!--<mat-form-field>-->
+    <!--<input matInput type="email" placeholder="דואר אלקטרוני" [(ngModel)]="model.email" name="email" required email #email="ngModel"/>-->
+  <!--</mat-form-field>-->
+  <!--<div [hidden]="email.valid || email.untouched" class="alert">-->
+    <!--הכנס כתובת מייל-->
+  <!--</div>-->
+
+  <!--<p>מס' עובדים בחברה</p>-->
+  <!--<mat-radio-group required>-->
+    <!--<mat-radio-button class="radio-button" value="1-20" (change)="radioChange($event)">1-20</mat-radio-button>-->
+    <!--<mat-radio-button class="radio-button" value="20-50" (change)="radioChange($event)">20-50</mat-radio-button>-->
+    <!--<mat-radio-button class="radio-button" value="50-100" (change)="radioChange($event)">50-100</mat-radio-button>-->
+    <!--<mat-radio-button class="radio-button" value="100+" (change)="radioChange($event)">100 ומעלה</mat-radio-button>-->
+  <!--</mat-radio-group>-->
+
+  <!--<p>מילוי טופס זה מהווה אישור לרישום לאתר ALLJobs, הסכמה לתנאי השימוש ואישור לקבל מגזין ניוזלטר, הטבות ופרסומות ייחודיים עבורי למייל ולנייד. כמו כן, אני מאשר קבלת מייל חד פעמי, שאינו שייך לאיזו מרשימות התפוצה הנ"ל, המציג את פעילותה של אולג'ובס.</p>-->
+
+  <!--<button mat-flat-button [disabled]="form.invalid || !model.workersAmount.length">אישור</button>-->
+  <!--</form>-->
+
+<form #form="ngForm">
+  <div class="form-group">
+    <label>שם פרטי</label>
+    <input type="text" class="form-control" [(ngModel)]="model.firstName" name="first-name" #firstName="ngModel"  required>
+  </div>
+
+  <div class="form-group">
+    <label>שם משפחה</label>
+    <input type="text" class="form-control" [(ngModel)]="model.firstName" name="last-name" #lastName="ngModel"  required>
+  </div>
+
+  <div class="form-group">
+    <label>שם חברה</label>
+    <input type="text" class="form-control" [(ngModel)]="model.firstName" name="company-name" #companyName="ngModel"  required>
+  </div>
+
+  <div class="form-group">
+    <label>תפקיד</label>
+    <input type="text" class="form-control" [(ngModel)]="model.firstName" name="role" #role="ngModel"  required>
+  </div>
+
+  <div class="form-group">
+    <label>טלפון</label>
+    <input type="text" class="form-control" [(ngModel)]="model.firstName" name="phone" #phone="ngModel"  required>
+  </div>
+
+
+    <div class="form-group">
+      <label>דואר אלקטרוני</label>
+      <input type="email" class="form-control" [(ngModel)]="model.firstName" name="email" #email="ngModel"  required>
+    </div>
+
+
+  <button type="submit" class="btn">אישור</button>
+</form>
