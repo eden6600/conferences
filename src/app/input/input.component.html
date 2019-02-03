@@ -1,3 +1,6 @@
-<mat-form-field>
-  <input type={{type}} placeholder={{placeholder}} matInput />
-</mat-form-field>
+<label>
+  Name:
+  <input type="text" [formControl]="name" />
+</label>
+
+<p>Value: {{ name.value }}</p>

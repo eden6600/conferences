@@ -1,12 +1,5 @@
-mat-card {
-  max-width: 750px;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-mat-card-content {
-  padding: 20px;
+.card {
+  border: 0;
 }
 
 h2 {
@@ -28,4 +21,3 @@ img {
   height: auto;
   display: block;
 }
-

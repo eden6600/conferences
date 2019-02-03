@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -6,23 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  form = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    companyName: ['', Validators.required],
+    role: ['', Validators.required],
+    phone: ['', Validators.required],
+    email: ['', Validators.required]
+  });
+  showAlert = false;
 
-  model = {
-    firstName: '',
-    lastName: '',
-    companyName: '',
-    role: '',
-    phone: null,
-    email: '',
-    workersAmount: ''
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {}
+
+  onSubmit() {
+    this.form.status === 'INVALID'
+      ? (this.showAlert = true)
+      : (this.showAlert = false);
   }
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  radioChange(e) {
-    this.model.workersAmount = e.value;
-  }
-
 }
